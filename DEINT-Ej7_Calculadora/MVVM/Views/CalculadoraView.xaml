@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DEINT_Ej7_Calculadora.MVVM.Views.CalculadoraView"
+             Title="CalculadoraView">
+    
+    <Grid RowDefinitions=".4*, *">
+        <Grid Grid.Row="0" RowDefinitions="*, *">
+            <Label 
+                Text="{Binding Operation}"
+                HorizontalOptions="End" 
+                VerticalOptions="Center" 
+                Padding="20" 
+                FontAttributes="Bold" 
+                FontSize="Large"
+                Grid.Row="0"/>
+            <Label 
+                Text="{Binding Result}"
+                HorizontalOptions="End" 
+                VerticalOptions="Center" 
+                Padding="20" 
+                FontAttributes="Bold" 
+                FontSize="Large"
+                Grid.Row="1"/>
+        </Grid>
+        <BoxView Grid.Row="1" CornerRadius="10, 10, 0, 0" />
+        <Grid Grid.Row="1" RowDefinitions="*, *, *, *, *" Padding="20" ColumnDefinitions="*, *, *, *" RowSpacing="10" ColumnSpacing="10">
+            <Button 
+                Grid.Row="0" 
+                Grid.Column="0" 
+                Text="AC" 
+                Command="{Binding CommandReset}"/>
+            <Button 
+                Grid.Row="0" 
+                Grid.Column="1" 
+                Text="⌫" 
+                Command="{Binding CommandBackSpace}"/>
+            <Button 
+                Grid.Row="0" 
+                Grid.Column="2" 
+                Text="%"
+                Command="{Binding CommandOperation}"
+                CommandParameter="%"/>
+            <Button 
+                Grid.Row="0" 
+                Grid.Column="3" 
+                Text="/"
+                Command="{Binding CommandOperation}"
+                CommandParameter="/"/>
+            <Button 
+                Grid.Row="1" 
+                Grid.Column="0" 
+                Text="7"
+                Command="{Binding CommandOperation}"
+                CommandParameter="7"/>
+            <Button 
+                Grid.Row="1" 
+                Grid.Column="1" 
+                Text="8"
+                Command="{Binding CommandOperation}"
+                CommandParameter="8"/>
+            <Button 
+                Grid.Row="1" 
+                Grid.Column="2" 
+                Text="9"
+                Command="{Binding CommandOperation}"
+                CommandParameter="9"/>
+            <Button 
+                Grid.Row="1" 
+                Grid.Column="3" 
+                Text="*"
+                Command="{Binding CommandOperation}"
+                CommandParameter="*"/>
+            <Button 
+                Grid.Row="2" 
+                Grid.Column="0" 
+                Text="4"
+                Command="{Binding CommandOperation}"
+                CommandParameter="4"/>
+            <Button 
+                Grid.Row="2" 
+                Grid.Column="1"
+                Text="5"
+                Command="{Binding CommandOperation}"
+                CommandParameter="5"/>
+            <Button 
+                Grid.Row="2" 
+                Grid.Column="2" 
+                Text="6"
+                Command="{Binding CommandOperation}"
+                CommandParameter="6"/>
+            <Button 
+                Grid.Row="2" 
+                Grid.Column="3" 
+                Text="-"
+                Command="{Binding CommandOperation}"
+                CommandParameter="-"/>
+            <Button 
+                Grid.Row="3" 
+                Grid.Column="0"
+                Text="1"
+                Command="{Binding CommandOperation}"
+                CommandParameter="1"/>
+            <Button 
+                Grid.Row="3" 
+                Grid.Column="1" 
+                Text="2"
+                Command="{Binding CommandOperation}"
+                CommandParameter="2"/>
+            <Button 
+                Grid.Row="3" 
+                Grid.Column="2" 
+                Text="3"
+                Command="{Binding CommandOperation}"
+                CommandParameter="3"/>
+            <Button 
+                Grid.Row="3" 
+                Grid.Column="3" 
+                Text="+"
+                Command="{Binding CommandOperation}"
+                CommandParameter="+"/>
+            <Button 
+                Grid.Row="4" 
+                Grid.ColumnSpan="2" 
+                Text="0"
+                Command="{Binding CommandOperation}"
+                CommandParameter="0"/>
+            <Button 
+                Grid.Row="4" 
+                Grid.Column="2" 
+                Text="."
+                Command="{Binding CommandOperation}"
+                CommandParameter="."/>
+            <Button 
+                Grid.Row="4" 
+                Grid.Column="3" 
+                Text="="
+                Command="{Binding CommandCalculate}"/>
+        </Grid>
+    </Grid>
+        
+</ContentPage>

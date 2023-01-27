@@ -1,4 +1,6 @@
-﻿namespace DEINT_Ej7_Calculadora;
+﻿using DEINT_Ej7_Calculadora.MVVM.Views;
+
+namespace DEINT_Ej7_Calculadora;
 
 public partial class App : Application
 {
@@ -6,6 +8,6 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		MainPage = new AppShell();
+		MainPage = new CalculadoraView();
 	}
 }
