@@ -25,7 +25,7 @@ namespace DEINT_Ej7_Calculadora.MVVM.ViewModels
             Result = "0";
             CommandReset = new Command(() => { Operation = "0"; });
             CommandBackSpace = new Command(() => {
-                if (Operation.Length != 1)
+                if (Operation.Length > 1)
                 {
                     Operation = Operation.Substring(0, Operation.Length - 1);
                 }

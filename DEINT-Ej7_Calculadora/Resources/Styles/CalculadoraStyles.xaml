@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xalm-comp compile="true"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DEINT_Ej7_Calculadora.Resources.Styles.CalculadoraStyles">
+
+    <Style Class="btn" TargetType="Button" x:Key="btn">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light=White, Dark=Black}"/>
+        <Setter Property="TextColor" Value="{AppThemeBinding Light=Black, Dark=White}"/>
+    </Style>
+
+    <Style Class="btnOrange" TargetType="Button" BasedOn="{StaticResource btn}">
+        <Setter Property="TextColor" Value="Orange"/>
+    </Style>
+
+    <Style Class="btnRed" TargetType="Button" BasedOn="{StaticResource btn}">
+        <Setter Property="TextColor" Value="Red"/>
+    </Style>
+
+    <Style TargetType="BoxView">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light=WhiteSmoke, Dark=LightGrey}"/>
+        <Setter Property="CornerRadius" Value="10, 10, 0, 0"/>
+    </Style>
+
+    <Style TargetType="ContentPage">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light=White, Dark=LightSlateGray}"/>
+    </Style>
+
+    <Style TargetType="Label">
+        <Setter Property="HorizontalOptions" Value="End"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+        <Setter Property="Padding" Value="20"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="FontSize" Value="Large"/>
+    </Style>
+
+    <Style Class="gridPad" TargetType="Grid">
+        <Setter Property="Padding" Value="20"/>
+        <Setter Property="RowSpacing" Value="10"/>
+        <Setter Property="ColumnSpacing" Value="10"/>
+    </Style>
+
+</ResourceDictionary>
