@@ -2,12 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DEINT_Ej7_Calculadora.MVVM.Views.CalculadoraView"
-             Title="CalculadoraView">
+             Title="CalculadoraView"
+             Style="{StaticResource contentPageStyle}">
 
-    <ContentPage.Resources>
-        
-    </ContentPage.Resources>
-    
     <Grid RowDefinitions=".4*, *">
         <Grid Grid.Row="0" RowDefinitions="*, *">
             <Label 
@@ -17,138 +14,141 @@
                 Text="{Binding Result}"
                 Grid.Row="1"/>
         </Grid>
-        <BoxView Grid.Row="1"/>
-        <Grid Grid.Row="1" RowDefinitions="*, *, *, *, *" ColumnDefinitions="*, *, *, *" StyleClass="gridPad">
-            <Button 
+
+        <Grid Grid.Row="1">
+            <BoxView />
+            <Grid RowDefinitions="*, *, *, *, *" ColumnDefinitions="*, *, *, *" StyleClass="gridPad">
+                <Button 
                 Grid.Row="0" 
                 Grid.Column="0" 
                 Text="AC"
                 StyleClass="btnOrange"
                 Command="{Binding CommandReset}"/>
-            <Button 
+                <Button 
                 Grid.Row="0" 
                 Grid.Column="1" 
                 Text="⌫" 
                 StyleClass="btnOrange"
                 Command="{Binding CommandBackSpace}"/>
-            <Button 
+                <Button 
                 Grid.Row="0" 
                 Grid.Column="2" 
                 Text="%"
                 StyleClass="btnOrange"
                 Command="{Binding CommandOperation}"
                 CommandParameter="%"/>
-            <Button 
+                <Button 
                 Grid.Row="0" 
                 Grid.Column="3" 
                 Text="/"
                 StyleClass="btnRed"
                 Command="{Binding CommandOperation}"
                 CommandParameter="/"/>
-            <Button 
+                <Button 
                 Grid.Row="1" 
                 Grid.Column="0" 
                 Text="7"
-                StyleClass="btn"
+                Style="{StaticResource btn}"
                 Command="{Binding CommandOperation}"
                 CommandParameter="7"/>
-            <Button 
+                <Button 
                 Grid.Row="1" 
                 Grid.Column="1" 
                 Text="8"
-                StyleClass="btn"
+                Style="{StaticResource btn}"
                 Command="{Binding CommandOperation}"
                 CommandParameter="8"/>
-            <Button 
+                <Button 
                 Grid.Row="1" 
                 Grid.Column="2" 
                 Text="9"
-                StyleClass="btn"
+                Style="{StaticResource btn}"
                 Command="{Binding CommandOperation}"
                 CommandParameter="9"/>
-            <Button 
+                <Button 
                 Grid.Row="1" 
                 Grid.Column="3" 
                 Text="*"
                 StyleClass="btnRed"
                 Command="{Binding CommandOperation}"
                 CommandParameter="*"/>
-            <Button 
+                <Button 
                 Grid.Row="2" 
                 Grid.Column="0" 
                 Text="4"
-                StyleClass="btn"
+                Style="{StaticResource btn}"
                 Command="{Binding CommandOperation}"
                 CommandParameter="4"/>
-            <Button 
+                <Button 
                 Grid.Row="2" 
                 Grid.Column="1"
                 Text="5"
-                StyleClass="btn"
+                Style="{StaticResource btn}"
                 Command="{Binding CommandOperation}"
                 CommandParameter="5"/>
-            <Button 
+                <Button 
                 Grid.Row="2" 
                 Grid.Column="2" 
                 Text="6"
-                StyleClass="btn"
+                Style="{StaticResource btn}"
                 Command="{Binding CommandOperation}"
                 CommandParameter="6"/>
-            <Button 
+                <Button 
                 Grid.Row="2" 
                 Grid.Column="3" 
                 Text="-"
                 StyleClass="btnRed"
                 Command="{Binding CommandOperation}"
                 CommandParameter="-"/>
-            <Button 
+                <Button 
                 Grid.Row="3" 
                 Grid.Column="0"
                 Text="1"
-                StyleClass="btn"
+                Style="{StaticResource btn}"
                 Command="{Binding CommandOperation}"
                 CommandParameter="1"/>
-            <Button 
+                <Button 
                 Grid.Row="3" 
                 Grid.Column="1" 
                 Text="2"
-                StyleClass="btn"
+                Style="{StaticResource btn}"
                 Command="{Binding CommandOperation}"
                 CommandParameter="2"/>
-            <Button 
+                <Button 
                 Grid.Row="3" 
                 Grid.Column="2" 
                 Text="3"
-                StyleClass="btn"
+                Style="{StaticResource btn}"
                 Command="{Binding CommandOperation}"
                 CommandParameter="3"/>
-            <Button 
+                <Button 
                 Grid.Row="3" 
                 Grid.Column="3" 
                 Text="+"
                 StyleClass="btnRed"
                 Command="{Binding CommandOperation}"
                 CommandParameter="+"/>
-            <Button 
+                <Button 
                 Grid.Row="4" 
                 Grid.ColumnSpan="2" 
                 Text="0"
-                StyleClass="btn"
+                Style="{StaticResource btn}"
                 Command="{Binding CommandOperation}"
                 CommandParameter="0"/>
-            <Button 
+                <Button 
                 Grid.Row="4" 
                 Grid.Column="2" 
                 Text="."
-                StyleClass="btn"
+                Style="{StaticResource btn}"
                 Command="{Binding CommandOperation}"
                 CommandParameter="."/>
-            <Button 
+                <Button 
                 Grid.Row="4" 
                 Grid.Column="3" 
                 Text="="
                 StyleClass="btnRed"
                 Command="{Binding CommandCalculate}"/>
+            </Grid>
         </Grid>
     </Grid>
         

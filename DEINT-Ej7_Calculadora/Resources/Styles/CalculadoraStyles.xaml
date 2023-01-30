@@ -3,8 +3,8 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
-    <Style Class="btn" TargetType="Button" x:Key="btn">
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light=White, Dark=Black}"/>
+    <Style TargetType="Button" x:Key="btn">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light=White, Dark=#272b33}"/>
         <Setter Property="TextColor" Value="{AppThemeBinding Light=Black, Dark=White}"/>
     </Style>
 
@@ -17,12 +17,12 @@
     </Style>
 
     <Style TargetType="BoxView">
-        <Setter Property="CornerRadius" Value="20, 20, 0, 0"/>
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light=WhiteSmoke, Dark=Grey}"/>
+        <Setter Property="Color" Value="{AppThemeBinding Light=WhiteSmoke, Dark=#292d36}"/>
+        <Setter Property="CornerRadius" Value="20, 20, 0, 0" />
     </Style>
 
-    <Style TargetType="ContentPage">
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light=White, Dark=LightSlateGray}"/>
+    <Style TargetType="ContentPage" x:Key="contentPageStyle">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light=White, Dark=#22252d}"/>
     </Style>
 
     <Style TargetType="Label">
